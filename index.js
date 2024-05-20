@@ -13,7 +13,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: ["http://localhost:5173"], // Update with your frontend URL
+        origin: [
+            "http://localhost:5173",
+            "https://lnm-program-frontend.vercel.app",
+        ], // Update with your frontend URL
         methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
         credentials: true, // Allow cookies to be sent with requests
     })
